@@ -18,6 +18,13 @@
 		261BA6D8253CCA220077E5E1 /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261BA6D7253CCA220077E5E1 /* AppFont.swift */; };
 		261BA6DC253CCABA0077E5E1 /* Roboto-Regular.ttf in Sources */ = {isa = PBXBuildFile; fileRef = 261BA6DB253CCA930077E5E1 /* Roboto-Regular.ttf */; };
 		261BA6DD253CCABA0077E5E1 /* Roboto-Medium.ttf in Sources */ = {isa = PBXBuildFile; fileRef = 261BA6DA253CCA780077E5E1 /* Roboto-Medium.ttf */; };
+		261BA6E2253CCFB60077E5E1 /* AppLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261BA6E1253CCFB60077E5E1 /* AppLabel.swift */; };
+		261BA6E5253CD2E90077E5E1 /* Url.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261BA6E4253CD2E90077E5E1 /* Url.swift */; };
+		261BA6E7253CD32E0077E5E1 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261BA6E6253CD32E0077E5E1 /* Character.swift */; };
+		261BA6E9253CD4090077E5E1 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261BA6E8253CD4090077E5E1 /* Extension.swift */; };
+		261BA6EB253CD4930077E5E1 /* GenericSerivce .swift in Sources */ = {isa = PBXBuildFile; fileRef = 261BA6EA253CD4930077E5E1 /* GenericSerivce .swift */; };
+		261BA6ED253CD6260077E5E1 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261BA6EC253CD6260077E5E1 /* Response.swift */; };
+		261BA6EF253CD63F0077E5E1 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261BA6EE253CD63F0077E5E1 /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +41,13 @@
 		261BA6D7253CCA220077E5E1 /* AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
 		261BA6DA253CCA780077E5E1 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		261BA6DB253CCA930077E5E1 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		261BA6E1253CCFB60077E5E1 /* AppLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLabel.swift; sourceTree = "<group>"; };
+		261BA6E4253CD2E90077E5E1 /* Url.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Url.swift; sourceTree = "<group>"; };
+		261BA6E6253CD32E0077E5E1 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		261BA6E8253CD4090077E5E1 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		261BA6EA253CD4930077E5E1 /* GenericSerivce .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GenericSerivce .swift"; sourceTree = "<group>"; };
+		261BA6EC253CD6260077E5E1 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		261BA6EE253CD63F0077E5E1 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		726EEA51DD5CC7A1FAB370EF /* Pods-MarvelApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelApp.release.xcconfig"; path = "Target Support Files/Pods-MarvelApp/Pods-MarvelApp.release.xcconfig"; sourceTree = "<group>"; };
 		E4C11CA07588F15F3B42BD5E /* Pods_MarvelApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -80,6 +94,7 @@
 		261BA6BE253CC2690077E5E1 /* MarvelApp */ = {
 			isa = PBXGroup;
 			children = (
+				261BA6E0253CCE1D0077E5E1 /* Models */,
 				261BA6D3253CC9240077E5E1 /* Base */,
 				261BA6BF253CC2690077E5E1 /* AppDelegate.swift */,
 				261BA6C1253CC2690077E5E1 /* SceneDelegate.swift */,
@@ -95,6 +110,7 @@
 		261BA6D3253CC9240077E5E1 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				261BA6E3253CD12C0077E5E1 /* Network */,
 				261BA6D9253CCA5D0077E5E1 /* Fonts */,
 				261BA6D4253CC9390077E5E1 /* Utilities */,
 			);
@@ -106,6 +122,8 @@
 			children = (
 				261BA6D5253CC9590077E5E1 /* UIViewExtension.swift */,
 				261BA6D7253CCA220077E5E1 /* AppFont.swift */,
+				261BA6E1253CCFB60077E5E1 /* AppLabel.swift */,
+				261BA6E8253CD4090077E5E1 /* Extension.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -117,6 +135,25 @@
 				261BA6DA253CCA780077E5E1 /* Roboto-Medium.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		261BA6E0253CCE1D0077E5E1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				261BA6E4253CD2E90077E5E1 /* Url.swift */,
+				261BA6E6253CD32E0077E5E1 /* Character.swift */,
+				261BA6EC253CD6260077E5E1 /* Response.swift */,
+				261BA6EE253CD63F0077E5E1 /* Data.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		261BA6E3253CD12C0077E5E1 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				261BA6EA253CD4930077E5E1 /* GenericSerivce .swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		32009B80AEE8B46F3FF22107 /* Frameworks */ = {
@@ -244,9 +281,16 @@
 			files = (
 				261BA6DC253CCABA0077E5E1 /* Roboto-Regular.ttf in Sources */,
 				261BA6DD253CCABA0077E5E1 /* Roboto-Medium.ttf in Sources */,
+				261BA6E2253CCFB60077E5E1 /* AppLabel.swift in Sources */,
 				261BA6C4253CC2690077E5E1 /* ViewController.swift in Sources */,
+				261BA6E9253CD4090077E5E1 /* Extension.swift in Sources */,
+				261BA6E5253CD2E90077E5E1 /* Url.swift in Sources */,
+				261BA6ED253CD6260077E5E1 /* Response.swift in Sources */,
+				261BA6EF253CD63F0077E5E1 /* Data.swift in Sources */,
+				261BA6EB253CD4930077E5E1 /* GenericSerivce .swift in Sources */,
 				261BA6D8253CCA220077E5E1 /* AppFont.swift in Sources */,
 				261BA6C0253CC2690077E5E1 /* AppDelegate.swift in Sources */,
+				261BA6E7253CD32E0077E5E1 /* Character.swift in Sources */,
 				261BA6D6253CC9590077E5E1 /* UIViewExtension.swift in Sources */,
 				261BA6C2253CC2690077E5E1 /* SceneDelegate.swift in Sources */,
 			);
