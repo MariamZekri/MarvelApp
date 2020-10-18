@@ -10,7 +10,7 @@ import UIKit
 
 struct MyAppFonts {
     
-    static let TILELBLFont = UIFont(name:"Roboto-Regular",size:15)
+    static let TILELBLFont = UIFont(name:"Roboto-Regular",size:14)
     static let BarTITLEFont = UIFont(name:"Roboto-Medium",size:17)
    
 }

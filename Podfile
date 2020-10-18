@@ -19,4 +19,7 @@ target 'MarvelApp' do
   # For offline cashe
   pod 'Cache'
   
+  # For display the progress of an ongoing task
+  pod 'SVProgressHUD'
+  
 end

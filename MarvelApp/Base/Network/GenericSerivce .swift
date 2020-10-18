@@ -8,7 +8,7 @@
 
 import Foundation
 
-class RemoteRepository {
+class GenericService {
     
     let apikey = "a4e90402bf004d35adce79816b39852f"
     let privateKey = "7ddf65fac4564eb1c1a26565f1feee77e98a33fe"

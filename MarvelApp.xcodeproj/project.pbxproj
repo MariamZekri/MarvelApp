@@ -10,11 +10,9 @@
 		027E193AB8B6C136371681AA /* Pods_MarvelApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C11CA07588F15F3B42BD5E /* Pods_MarvelApp.framework */; };
 		261BA6C0253CC2690077E5E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261BA6BF253CC2690077E5E1 /* AppDelegate.swift */; };
 		261BA6C2253CC2690077E5E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261BA6C1253CC2690077E5E1 /* SceneDelegate.swift */; };
-		261BA6C4253CC2690077E5E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261BA6C3253CC2690077E5E1 /* ViewController.swift */; };
 		261BA6C7253CC2690077E5E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 261BA6C5253CC2690077E5E1 /* Main.storyboard */; };
 		261BA6C9253CC2710077E5E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 261BA6C8253CC2710077E5E1 /* Assets.xcassets */; };
 		261BA6CC253CC2710077E5E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 261BA6CA253CC2710077E5E1 /* LaunchScreen.storyboard */; };
-		261BA6D6253CC9590077E5E1 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261BA6D5253CC9590077E5E1 /* UIViewExtension.swift */; };
 		261BA6D8253CCA220077E5E1 /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261BA6D7253CCA220077E5E1 /* AppFont.swift */; };
 		261BA6DC253CCABA0077E5E1 /* Roboto-Regular.ttf in Sources */ = {isa = PBXBuildFile; fileRef = 261BA6DB253CCA930077E5E1 /* Roboto-Regular.ttf */; };
 		261BA6DD253CCABA0077E5E1 /* Roboto-Medium.ttf in Sources */ = {isa = PBXBuildFile; fileRef = 261BA6DA253CCA780077E5E1 /* Roboto-Medium.ttf */; };
@@ -25,6 +23,10 @@
 		261BA6EB253CD4930077E5E1 /* GenericSerivce .swift in Sources */ = {isa = PBXBuildFile; fileRef = 261BA6EA253CD4930077E5E1 /* GenericSerivce .swift */; };
 		261BA6ED253CD6260077E5E1 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261BA6EC253CD6260077E5E1 /* Response.swift */; };
 		261BA6EF253CD63F0077E5E1 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261BA6EE253CD63F0077E5E1 /* Data.swift */; };
+		261BA6F2253CDAD60077E5E1 /* CharachterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261BA6F1253CDAD60077E5E1 /* CharachterListViewController.swift */; };
+		261BA6F6253CDDDA0077E5E1 /* charachterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261BA6F4253CDDDA0077E5E1 /* charachterTableViewCell.swift */; };
+		261BA6F7253CDDDA0077E5E1 /* charachterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 261BA6F5253CDDDA0077E5E1 /* charachterTableViewCell.xib */; };
+		261BA6FA253CF4460077E5E1 /* CharachterDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261BA6F9253CF4460077E5E1 /* CharachterDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,12 +34,10 @@
 		261BA6BC253CC2690077E5E1 /* MarvelApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		261BA6BF253CC2690077E5E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		261BA6C1253CC2690077E5E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		261BA6C3253CC2690077E5E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		261BA6C6253CC2690077E5E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		261BA6C8253CC2710077E5E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		261BA6CB253CC2710077E5E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		261BA6CD253CC2710077E5E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		261BA6D5253CC9590077E5E1 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		261BA6D7253CCA220077E5E1 /* AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
 		261BA6DA253CCA780077E5E1 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		261BA6DB253CCA930077E5E1 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
@@ -48,6 +48,10 @@
 		261BA6EA253CD4930077E5E1 /* GenericSerivce .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GenericSerivce .swift"; sourceTree = "<group>"; };
 		261BA6EC253CD6260077E5E1 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		261BA6EE253CD63F0077E5E1 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		261BA6F1253CDAD60077E5E1 /* CharachterListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharachterListViewController.swift; sourceTree = "<group>"; };
+		261BA6F4253CDDDA0077E5E1 /* charachterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = charachterTableViewCell.swift; sourceTree = "<group>"; };
+		261BA6F5253CDDDA0077E5E1 /* charachterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = charachterTableViewCell.xib; sourceTree = "<group>"; };
+		261BA6F9253CF4460077E5E1 /* CharachterDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharachterDetailsViewController.swift; sourceTree = "<group>"; };
 		726EEA51DD5CC7A1FAB370EF /* Pods-MarvelApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelApp.release.xcconfig"; path = "Target Support Files/Pods-MarvelApp/Pods-MarvelApp.release.xcconfig"; sourceTree = "<group>"; };
 		E4C11CA07588F15F3B42BD5E /* Pods_MarvelApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -94,11 +98,12 @@
 		261BA6BE253CC2690077E5E1 /* MarvelApp */ = {
 			isa = PBXGroup;
 			children = (
+				261BA6F8253CF3620077E5E1 /* CharachterDetails */,
+				261BA6F0253CD9F50077E5E1 /* CharachterList */,
 				261BA6E0253CCE1D0077E5E1 /* Models */,
 				261BA6D3253CC9240077E5E1 /* Base */,
 				261BA6BF253CC2690077E5E1 /* AppDelegate.swift */,
 				261BA6C1253CC2690077E5E1 /* SceneDelegate.swift */,
-				261BA6C3253CC2690077E5E1 /* ViewController.swift */,
 				261BA6C5253CC2690077E5E1 /* Main.storyboard */,
 				261BA6C8253CC2710077E5E1 /* Assets.xcassets */,
 				261BA6CA253CC2710077E5E1 /* LaunchScreen.storyboard */,
@@ -120,7 +125,6 @@
 		261BA6D4253CC9390077E5E1 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				261BA6D5253CC9590077E5E1 /* UIViewExtension.swift */,
 				261BA6D7253CCA220077E5E1 /* AppFont.swift */,
 				261BA6E1253CCFB60077E5E1 /* AppLabel.swift */,
 				261BA6E8253CD4090077E5E1 /* Extension.swift */,
@@ -154,6 +158,32 @@
 				261BA6EA253CD4930077E5E1 /* GenericSerivce .swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		261BA6F0253CD9F50077E5E1 /* CharachterList */ = {
+			isa = PBXGroup;
+			children = (
+				261BA6F3253CDD910077E5E1 /* CharachterListCustomCell */,
+				261BA6F1253CDAD60077E5E1 /* CharachterListViewController.swift */,
+			);
+			path = CharachterList;
+			sourceTree = "<group>";
+		};
+		261BA6F3253CDD910077E5E1 /* CharachterListCustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				261BA6F4253CDDDA0077E5E1 /* charachterTableViewCell.swift */,
+				261BA6F5253CDDDA0077E5E1 /* charachterTableViewCell.xib */,
+			);
+			path = CharachterListCustomCell;
+			sourceTree = "<group>";
+		};
+		261BA6F8253CF3620077E5E1 /* CharachterDetails */ = {
+			isa = PBXGroup;
+			children = (
+				261BA6F9253CF4460077E5E1 /* CharachterDetailsViewController.swift */,
+			);
+			path = CharachterDetails;
 			sourceTree = "<group>";
 		};
 		32009B80AEE8B46F3FF22107 /* Frameworks */ = {
@@ -224,6 +254,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				261BA6F7253CDDDA0077E5E1 /* charachterTableViewCell.xib in Resources */,
 				261BA6CC253CC2710077E5E1 /* LaunchScreen.storyboard in Resources */,
 				261BA6C9253CC2710077E5E1 /* Assets.xcassets in Resources */,
 				261BA6C7253CC2690077E5E1 /* Main.storyboard in Resources */,
@@ -282,16 +313,17 @@
 				261BA6DC253CCABA0077E5E1 /* Roboto-Regular.ttf in Sources */,
 				261BA6DD253CCABA0077E5E1 /* Roboto-Medium.ttf in Sources */,
 				261BA6E2253CCFB60077E5E1 /* AppLabel.swift in Sources */,
-				261BA6C4253CC2690077E5E1 /* ViewController.swift in Sources */,
+				261BA6F6253CDDDA0077E5E1 /* charachterTableViewCell.swift in Sources */,
 				261BA6E9253CD4090077E5E1 /* Extension.swift in Sources */,
+				261BA6FA253CF4460077E5E1 /* CharachterDetailsViewController.swift in Sources */,
 				261BA6E5253CD2E90077E5E1 /* Url.swift in Sources */,
+				261BA6F2253CDAD60077E5E1 /* CharachterListViewController.swift in Sources */,
 				261BA6ED253CD6260077E5E1 /* Response.swift in Sources */,
 				261BA6EF253CD63F0077E5E1 /* Data.swift in Sources */,
 				261BA6EB253CD4930077E5E1 /* GenericSerivce .swift in Sources */,
 				261BA6D8253CCA220077E5E1 /* AppFont.swift in Sources */,
 				261BA6C0253CC2690077E5E1 /* AppDelegate.swift in Sources */,
 				261BA6E7253CD32E0077E5E1 /* Character.swift in Sources */,
-				261BA6D6253CC9590077E5E1 /* UIViewExtension.swift in Sources */,
 				261BA6C2253CC2690077E5E1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,7 +470,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QXH9USK7PQ;
+				DEVELOPMENT_TEAM = CC2DDPEACD;
 				INFOPLIST_FILE = MarvelApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -458,7 +490,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QXH9USK7PQ;
+				DEVELOPMENT_TEAM = CC2DDPEACD;
 				INFOPLIST_FILE = MarvelApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
