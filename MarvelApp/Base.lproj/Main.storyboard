@@ -39,25 +39,11 @@
                         <viewControllerLayoutGuide type="bottom" id="WG7-Vx-PdW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="c8t-qK-Aa1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar hidden="YES" contentMode="redraw" searchBarStyle="minimal" text="" placeholder="Find your Hero!" translatesAutoresizingMaskIntoConstraints="NO" id="03b-VE-mdG">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                <color key="backgroundColor" name="darkGray"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="czX-c5-mD1"/>
-                                </constraints>
-                                <color key="barTintColor" name="white"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="searchField.textColor">
-                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qCc-oF-PXd">
-                                <rect key="frame" x="0.0" y="44" width="414" height="730"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="MJd-wu-cKR" id="QQu-6v-00b"/>
@@ -68,12 +54,9 @@
                         <color key="backgroundColor" name="white"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="qCc-oF-PXd" secondAttribute="trailing" id="5Qr-MO-6GD"/>
-                            <constraint firstItem="03b-VE-mdG" firstAttribute="leading" secondItem="c8t-qK-Aa1" secondAttribute="leading" id="Fbz-ul-aUf"/>
-                            <constraint firstItem="03b-VE-mdG" firstAttribute="top" secondItem="R3S-OI-fTb" secondAttribute="bottom" id="Q4E-lm-HiC"/>
-                            <constraint firstAttribute="trailing" secondItem="03b-VE-mdG" secondAttribute="trailing" id="TqD-hw-uXC"/>
-                            <constraint firstItem="qCc-oF-PXd" firstAttribute="top" secondItem="03b-VE-mdG" secondAttribute="bottom" id="Us6-K5-0Ck"/>
                             <constraint firstItem="WG7-Vx-PdW" firstAttribute="top" secondItem="qCc-oF-PXd" secondAttribute="bottom" id="Zj1-Ee-LTX"/>
                             <constraint firstItem="qCc-oF-PXd" firstAttribute="leading" secondItem="c8t-qK-Aa1" secondAttribute="leading" id="n9Q-RQ-nlu"/>
+                            <constraint firstItem="qCc-oF-PXd" firstAttribute="top" secondItem="R3S-OI-fTb" secondAttribute="bottom" id="zkV-bh-vma"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CRb-XD-HCx"/>
                     </view>
@@ -97,8 +80,11 @@
                                 <constraint firstItem="o6M-Lk-Fnp" firstAttribute="centerY" secondItem="RNa-NF-YUY" secondAttribute="centerY" id="6kO-2M-1Rb"/>
                             </constraints>
                         </view>
-                        <barButtonItem key="rightBarButtonItem" image="search_ic" id="0yS-Nm-W9T">
+                        <barButtonItem key="rightBarButtonItem" image="search_ic" style="plain" id="0yS-Nm-W9T">
                             <color key="tintColor" name="white"/>
+                            <connections>
+                                <action selector="searchAction:" destination="MJd-wu-cKR" id="muD-wk-0O8"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -218,7 +204,76 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lXb-Ia-HM8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="915.94202898550736" y="-338.16964285714283"/>
+            <point key="canvasLocation" x="1464" y="-338"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="beR-fG-oWs">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" id="Apg-vs-aVB" customClass="SearchViewController" customModule="MarvelApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hm8-j2-7I1"/>
+                        <viewControllerLayoutGuide type="bottom" id="jsr-MT-X4o"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="adL-i5-NfN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="arC-ae-tEF">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Apg-vs-aVB" id="bbF-0D-7uG"/>
+                                    <outlet property="delegate" destination="Apg-vs-aVB" id="z1p-qN-M92"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MfQ-tT-8DV">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <color key="backgroundColor" name="darkGray"/>
+                            </view>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" text="" placeholder="Find your Hero!" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="03b-VE-mdG">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="backgroundColor" name="darkGray"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="czX-c5-mD1"/>
+                                </constraints>
+                                <color key="barTintColor" name="redColor"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="searchField.textColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" name="white"/>
+                        <constraints>
+                            <constraint firstItem="03b-VE-mdG" firstAttribute="leading" secondItem="a3J-ll-c17" secondAttribute="leading" id="9cP-Ub-BRu"/>
+                            <constraint firstAttribute="trailing" secondItem="arC-ae-tEF" secondAttribute="trailing" id="9cY-vE-Egf"/>
+                            <constraint firstItem="03b-VE-mdG" firstAttribute="top" secondItem="hm8-j2-7I1" secondAttribute="bottom" id="ALz-MD-uAU"/>
+                            <constraint firstAttribute="trailing" secondItem="MfQ-tT-8DV" secondAttribute="trailing" id="H28-Ye-NUM"/>
+                            <constraint firstItem="03b-VE-mdG" firstAttribute="top" secondItem="MfQ-tT-8DV" secondAttribute="bottom" id="Ksc-4U-Lv7"/>
+                            <constraint firstItem="MfQ-tT-8DV" firstAttribute="top" secondItem="adL-i5-NfN" secondAttribute="top" id="LRg-oW-Aja"/>
+                            <constraint firstItem="arC-ae-tEF" firstAttribute="top" secondItem="03b-VE-mdG" secondAttribute="bottom" id="NHI-G3-J82"/>
+                            <constraint firstItem="03b-VE-mdG" firstAttribute="leading" secondItem="adL-i5-NfN" secondAttribute="leading" id="Nza-Rc-BFg"/>
+                            <constraint firstAttribute="bottom" secondItem="arC-ae-tEF" secondAttribute="bottom" id="VXz-2U-3xW"/>
+                            <constraint firstItem="arC-ae-tEF" firstAttribute="leading" secondItem="adL-i5-NfN" secondAttribute="leading" id="Xg9-Qt-SgQ"/>
+                            <constraint firstItem="MfQ-tT-8DV" firstAttribute="leading" secondItem="adL-i5-NfN" secondAttribute="leading" id="epP-Kn-3V0"/>
+                            <constraint firstAttribute="trailing" secondItem="03b-VE-mdG" secondAttribute="trailing" id="iTi-kP-3gY"/>
+                            <constraint firstItem="03b-VE-mdG" firstAttribute="trailing" secondItem="a3J-ll-c17" secondAttribute="trailing" id="urX-iJ-TZk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="a3J-ll-c17"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="uPO-lc-rI9">
+                        <nil key="title"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="searchBar" destination="03b-VE-mdG" id="Czy-6D-ye8"/>
+                        <outlet property="searchTableView" destination="arC-ae-tEF" id="MTK-BA-Rzd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XQa-nN-fR8" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="795.6521739130435" y="-338.16964285714283"/>
         </scene>
     </scenes>
     <resources>
@@ -227,6 +282,9 @@
         <image name="search_ic" width="28" height="28"/>
         <namedColor name="darkGray">
             <color red="0.2627450980392157" green="0.29019607843137257" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="redColor">
+            <color red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="white">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -8,6 +8,8 @@
 
 import UIKit
 import SVProgressHUD
+import SystemConfiguration
+import UIScrollView_InfiniteScroll
 
 class CharachterListViewController: UIViewController {
     
@@ -20,6 +22,11 @@ class CharachterListViewController: UIViewController {
     // MARK: - Helper variables
     let callNetwork = GenericService()
     var allCharacters = [Character?]()
+
+    // MARK: - Paging
+    var limit : Int = 5
+    let offset : Int = 1
+    let pageSize : Int = 5
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -29,26 +36,50 @@ class CharachterListViewController: UIViewController {
         heroTableView.delegate = self
         heroTableView.dataSource = self
         heroTableView.register(UINib(nibName: "charachterTableViewCell", bundle: nil), forCellReuseIdentifier: "charachterTableViewCell")
-        getCharactersData()
+       
+        self.getCharactersData()
+        heroTableView.addInfiniteScroll { (tableView) -> Void in
+            // update table view
+            self.limit += self.pageSize
+         
+        self.getCharactersData(fromInfinite: true)
+            // finish infinite scroll animation
+            
+        }
+        
     }
     
     
     override func viewWillAppear(_ animated: Bool) {
-         navigationController?.setNavigationBarHidden(false, animated: false)
+        navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
     // MARK: - Helper Method To Get Data Networl Call
-    func getCharactersData(){
+    func getCharactersData(fromInfinite:Bool = false){
+        if !fromInfinite{
         SVProgressHUD.show(withStatus: "Loading...")
-        self.callNetwork.fetchCharacteres() { (results) in
-            self.allCharacters = results!
+        }
+        self.callNetwork.fetchCharacteres(limit: limit, offset: offset) { (results) in
+            guard let result = results else{
+                return
+            }
+            self.allCharacters = result
             DispatchQueue.main.async {
                 self.heroTableView.reloadData()
                 SVProgressHUD.dismiss()
+                self.heroTableView.finishInfiniteScroll()
             }
         }
     }
     
+
+    // MARK: - Actions
+    @IBAction func searchAction(_ sender: Any) {
+       let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SearchViewController") as? SearchViewController
+            vc?.allCharacters = allCharacters
+            self.navigationController?.pushViewController(vc!, animated: true)
+        
+    }
     
 }
 
@@ -60,20 +91,7 @@ extension CharachterListViewController:UITableViewDataSource,UITableViewDelegate
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "charachterTableViewCell", for: indexPath ) as! charachterTableViewCell
-        
-        cell.heroNameLbl.text = allCharacters[indexPath.row]?.name
-        
-        let imageUrl : String  = (self.allCharacters[indexPath.row]?.thumbnail?.path)!
-        let imageExtension : String  = (self.allCharacters[indexPath.row]?.thumbnail?.thumbnailExtension)!
-        
-        
-        let imageFullPath = imageUrl+"."+imageExtension
-        
-        cell.heroImg.downloaded(from: imageFullPath)
-        
-        
-        
-        
+        cell.setData(obj: allCharacters[indexPath.row]!)
         
         return cell
     }
@@ -82,7 +100,6 @@ extension CharachterListViewController:UITableViewDataSource,UITableViewDelegate
         return 150
         
     }
-    
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -96,4 +113,10 @@ extension CharachterListViewController:UITableViewDataSource,UITableViewDelegate
         
     }
     
+    
+    
+    
 }
+
+
+

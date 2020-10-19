@@ -1,34 +1,28 @@
 PODS:
-  - Alamofire (5.2.2)
-  - Cache (6.0.0)
+  - Cache (5.2.0)
   - IQKeyboardManagerSwift (6.5.6)
-  - Kingfisher (5.15.6):
-    - Kingfisher/Core (= 5.15.6)
-  - Kingfisher/Core (5.15.6)
   - SVProgressHUD (2.2.5)
+  - UIScrollView-InfiniteScroll (1.1.0)
 
 DEPENDENCIES:
-  - Alamofire
-  - Cache
+  - Cache (~> 5.2.0)
   - IQKeyboardManagerSwift
-  - Kingfisher
   - SVProgressHUD
+  - UIScrollView-InfiniteScroll
 
 SPEC REPOS:
   trunk:
-    - Alamofire
     - Cache
     - IQKeyboardManagerSwift
-    - Kingfisher
     - SVProgressHUD
+    - UIScrollView-InfiniteScroll
 
 SPEC CHECKSUMS:
-  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
-  Cache: 4ca7e00363fca5455f26534e5607634c820ffc2d
+  Cache: 807c5d86d01a177f06ede9865add3aea269bbfd4
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
-  Kingfisher: b3554e7bf6106115b44e8795300bad580ef2fdc7
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  UIScrollView-InfiniteScroll: 3ef456bcbe759c19f510a383cff96e6647c98c98
 
-PODFILE CHECKSUM: b32f68033c85271fd5c8fe007d73bd0bb04bfd5b
+PODFILE CHECKSUM: e615ce5aac00ac658089a31d17289820760b95db
 
 COCOAPODS: 1.9.1

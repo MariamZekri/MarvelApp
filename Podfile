@@ -7,19 +7,16 @@ target 'MarvelApp' do
 
   # Pods for MarvelApp
 
-  # For Networking
-  pod 'Alamofire'
-  
-  # For Download and chashe Photos
-  pod 'Kingfisher'
   
   # Prevent keyboard sliding up and covering UI
   pod 'IQKeyboardManagerSwift'
   
   # For offline cashe
-  pod 'Cache'
+  pod 'Cache', '~> 5.2.0'
   
   # For display the progress of an ongoing task
   pod 'SVProgressHUD'
+  
+  pod 'UIScrollView-InfiniteScroll'
   
 end

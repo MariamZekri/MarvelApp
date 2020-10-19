@@ -1,20 +1,17 @@
 import Foundation
 
 public extension Storage {
-  func transformData() -> Storage<Key, Data> {
+  func transformData() -> Storage<Data> {
     let storage = transform(transformer: TransformerFactory.forData())
     return storage
   }
 
-
-  #if os(iOS) || os(tvOS) || os(macOS)
-  func transformImage() -> Storage<Key, Image> {
+  func transformImage() -> Storage<Image> {
     let storage = transform(transformer: TransformerFactory.forImage())
     return storage
   }
-  #endif
 
-  func transformCodable<U: Codable>(ofType: U.Type) -> Storage<Key, U> {
+  func transformCodable<U: Codable>(ofType: U.Type) -> Storage<U> {
     let storage = transform(transformer: TransformerFactory.forCodable(ofType: U.self))
     return storage
   }

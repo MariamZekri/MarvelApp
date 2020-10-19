@@ -15,15 +15,15 @@ public protocol KeyObservationRegistry {
   @discardableResult
   func addObserver<O: AnyObject>(
     _ observer: O,
-    forKey key: S.Key,
-    closure: @escaping (O, S, KeyChange<S.Value>) -> Void
+    forKey key: String,
+    closure: @escaping (O, S, KeyChange<S.T>) -> Void
   ) -> ObservationToken
 
   /**
    Removes observer by the given key.
    - Parameter key: Unique key to identify the object in the cache
    */
-  func removeObserver(forKey key: S.Key)
+  func removeObserver(forKey key: String)
 
   /// Removes all registered key observers
   func removeAllKeyObservers()

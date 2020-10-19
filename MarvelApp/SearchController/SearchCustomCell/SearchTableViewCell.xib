@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchTableViewCell" id="KGk-i7-Jjw" customClass="SearchTableViewCell" customModule="MarvelApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vm3-Ks-SSb">
+                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="GWw-wN-e7K"/>
+                            <constraint firstAttribute="height" constant="80" id="QCa-i1-of0"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMo-38-tI3" customClass="MyAppLabel" customModule="MarvelApp" customModuleProvider="target">
+                        <rect key="frame" x="90" y="29.5" width="0.0" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="XMo-38-tI3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="29.5" id="6bt-Zx-NTO"/>
+                    <constraint firstItem="vm3-Ks-SSb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="8HF-Ed-EvR"/>
+                    <constraint firstItem="XMo-38-tI3" firstAttribute="leading" secondItem="vm3-Ks-SSb" secondAttribute="trailing" constant="10" id="GYi-JQ-hqn"/>
+                    <constraint firstItem="XMo-38-tI3" firstAttribute="centerY" secondItem="vm3-Ks-SSb" secondAttribute="centerY" id="SyC-eS-wOi"/>
+                    <constraint firstItem="vm3-Ks-SSb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="bnY-Fd-3Ej"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="heroImg" destination="vm3-Ks-SSb" id="HyJ-3f-1Bo"/>
+                <outlet property="heroNameLbl" destination="XMo-38-tI3" id="1Qv-PC-xlN"/>
+            </connections>
+            <point key="canvasLocation" x="134.78260869565219" y="136.60714285714286"/>
+        </tableViewCell>
+    </objects>
+</document>

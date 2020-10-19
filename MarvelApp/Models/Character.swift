@@ -15,18 +15,7 @@ struct Character : Codable {
     let modified : String?
     let thumbnail : Thumbnail?
     let resourceURI : String?
-    let comics : Comic?
-//    let series : Serie?
-//    let stories : Storie?
-//    let events : Event?
     let urls : [Url]?
-}
-
-struct Comic : Codable {
-    let available : Int?
-    let collectionURI : String?
-    let items : [Item]?
-    let returned : Int?
 }
 
 struct Item : Codable {

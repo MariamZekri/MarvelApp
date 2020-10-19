@@ -15,5 +15,5 @@ struct Response : Codable {
     let attributionText : String?
     let attributionHTML : String?
     let etag : String?
-    let data : Data?
+    let data : HeroesData?
 }

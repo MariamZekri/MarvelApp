@@ -1,18 +1,19 @@
 //
-//  charachterTableViewCell.swift
+//  SearchTableViewCell.swift
 //  MarvelApp
 //
-//  Created by Mariam Abdelhamid on 10/18/20.
+//  Created by Mariam Abdelhamid on 10/19/20.
 //  Copyright © 2020 Marvel. All rights reserved.
 //
 
 import UIKit
 
-class charachterTableViewCell: UITableViewCell {
+class SearchTableViewCell: UITableViewCell {
     
-    // MARK: - Outlets
+    
     @IBOutlet weak var heroImg: UIImageView!
-    @IBOutlet weak var heroNameLbl: MyAppTitleLabel!
+    @IBOutlet weak var heroNameLbl: MyAppLabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,15 +25,14 @@ class charachterTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
-    func setData(obj: Character){
+    
+    func setSearchData(obj: Character){
         heroNameLbl.text = obj.name
         let imageUrl : String  = (obj.thumbnail?.path)!
         let imageExtension : String  = (obj.thumbnail?.thumbnailExtension)!
-              
-              
-              let imageFullPath = imageUrl+"."+imageExtension
-              
-              heroImg.downloaded(from: imageFullPath)
-    }
+           
+           let imageFullPath = imageUrl+"."+imageExtension
+           heroImg.downloaded(from: imageFullPath)
+
+       }
 }
